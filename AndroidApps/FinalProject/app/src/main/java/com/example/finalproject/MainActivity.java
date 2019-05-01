@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ImageView pianoimg = findViewById(R.id.pianoimg);
 
         Spinner spinner = findViewById(R.id.notes);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.options, android.R.layout.simple_spinner_item);
@@ -43,22 +45,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 scaletext2.setText("D , E , F , G , A , A# , C");
                 break;
             case 3:
+                scaletext1.setText("E♭, F, G, A♭, B♭, C, D");
+                scaletext2.setText("E♭, F, G♭, A♭, B♭, C♭, and D♭");
+                break;
+            case 4:
                 scaletext1.setText("E , F# , G# , A , B , C# , D#");
                 scaletext2.setText("E , F# , G , A , B , C , D");
                 break;
-            case 4:
+            case 5:
                 scaletext1.setText("F, G, A, A#, C, D, E");
                 scaletext2.setText("F, G, A♭, B♭, C, D♭, and E♭");
                 break;
-            case 5:
+            case 6:
                 scaletext1.setText("F♯, G♯, A♯, B, C♯, D♯, E♯");
                 scaletext2.setText("F♯, G♯, A, B, C♯, D, E");
                 break;
-            case 6:
+            case 7:
                 scaletext1.setText("G, A, B, C, D, E, F♯");
                 scaletext2.setText("G, A, B♭, C, D, E♭, F");
                 break;
-            case 7:
+            case 8:
                 scaletext1.setText("G♯, A♯, B♯, C♯, D♯, E♯, G");
                 scaletext2.setText("G♯, A♯, B, C♯, D♯, E, F♯");
                 break;
